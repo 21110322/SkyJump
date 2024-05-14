@@ -1,8 +1,15 @@
 #ifndef SKYJUMP_HPP
 #define SKYJUMP_HPP
-
 #include "Jumper.hpp"
 #include "Parachute.hpp"
+#include <iostream>
+#include <string>
+#include <thread>
+#include <fstream>
+#include "SkyJump.hpp"
+
+using namespace std;
+using namespace ftxui;
 
 class SkyJump {
 private:
@@ -15,4 +22,4 @@ public:
     void end();
 };
 
-#endif // SKYJUMP_HPP
+#endl
