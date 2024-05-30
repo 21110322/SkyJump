@@ -1,12 +1,14 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-BIN_DIR = bin
-SRC_DIR = src
+bin/test : src/tui_test.cpp
+    g++ src/tui_test.cpp -o bin/test -std=c++2a -lftxui-screen -lftxui-component -lftxui -Iinclude
 
-all: $(BIN_DIR)/main
+bin/space : src/main.cpp
+    g++ src/main.cpp -o bin/space -std=c++2a -lftxui-screen -lftxui-component -lftxui-dom -Iinclude     
 
-$(BIN_DIR)/main: $(SRC_DIR)/main.cpp $(SRC_DIR)/SkyJump.cpp $(SRC_DIR)/Jumper.cpp $(SRC_DIR)/Parachute.cpp
-	$(CXX) $(CXXFLAGS) -Iinclude $^ -o $@
+bin/ventana : src/ventana.cpp
+    g++ src/ventana.cpp -o bin/ventana -std=c++2a -lftxui-screen -lftxui-component -lftxui-dom .Iinclude
+    
+run : bin/space
+    ./bin/space
 
-clean:
-	rm -rf $(BIN_DIR)/*
+runVentana : bin/ventana
+    ./bin/ventana
