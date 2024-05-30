@@ -10,6 +10,8 @@
 
 ##### bin/ - Contiene los ejecutables del proyecto
 ##### src/ - Contiene el codigo fuente
-##### include/ - Los archivos de cabecera
+##### include/ - Los archivos de cabecera 
 ##### assets/ - Contiene los recuros del proyecto
 ##### docs/ - Contiene la documentacion del proyecto
+
+### 29/05/24
