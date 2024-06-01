@@ -1,14 +1,9 @@
-bin/test : src/tui_test.cpp
-    g++ src/tui_test.cpp -o bin/test -std=c++2a -lftxui-screen -lftxui-component -lftxui -Iinclude
+all:
+    g++ -I include/ src/*.cpp -o bin/doodlejump
 
-bin/space : src/main.cpp
-    g++ src/main.cpp -o bin/space -std=c++2a -lftxui-screen -lftxui-component -lftxui-dom -Iinclude     
+run:
+    ./bin/doodlejump
 
-bin/ventana : src/ventana.cpp
-    g++ src/ventana.cpp -o bin/ventana -std=c++2a -lftxui-screen -lftxui-component -lftxui-dom .Iinclude
+    //Compila con make all 
+    make run para ejecutar
     
-run : bin/space
-    ./bin/space
-
-runVentana : bin/ventana
-    ./bin/ventana

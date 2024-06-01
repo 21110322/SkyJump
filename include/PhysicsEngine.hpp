@@ -1,0 +1,1 @@
+//Esta clase podría ser responsable de actualizar la posición y la velocidad del jugador en función de la física del juego.
