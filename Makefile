@@ -1,9 +1,20 @@
-all:
-    g++ -I include/ src/*.cpp -o bin/doodlejump
+CC = g++
+CFLAGS = -Wall -std=c++11
+INCLUDES = -I./include
+SOURCES = $(wildcard ./src/*.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
+TARGET = bin/doodlejump
 
-run:
-    ./bin/doodlejump
+all: $(TARGET)
 
-    //Compila con make all 
-    make run para ejecutar
-    
+$(TARGET): $(OBJECTS)
+    $(CC) $(CFLAGS) $(INCLUDES) -o $@ $^
+
+%.o: %.cpp
+    $(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+clean:
+    rm -f $(OBJECTS) $(TARGET)
+
+run: $(TARGET)
+    ./$(TARGET)

@@ -1,5 +1,12 @@
-#ifndef PLAYER_HPP
-#define PLAYER_HPP
+#pragma once
+#include <fstream>
+#include <Player.hpp>
+#include <Platform.hpp>
+#include <vector>
+using namespace std;
+using namespace ftxui;
+
+
 
 class Player {
 private:
@@ -29,7 +36,6 @@ public:
     // Otros métodos para manejar el comportamiento del jugador
 };
 
-#endif
 
 //Esta clase podría representar al jugador en el juego. 
 //Podría tener atributos como la posición, la velocidad y el estado del jugador (por ejemplo, si está saltando o cayendo).

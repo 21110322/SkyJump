@@ -1,12 +1,13 @@
 // Esta clase podría representar el estado general del juego. Podría tener atributos como el jugador, una lista de plataformas y el puntaje actual. 
 //También podría tener métodos para actualizar el juego, dibujar el juego y manejar la entrada del usuario.
 
-#ifndef GAME_HPP
-#define GAME_HPP
-
-#include "Player.hpp"
-#include "Platform.hpp"
+#pragma once
+#include <fstream>
+#include <Player.hpp>
+#include <Platform.hpp>
 #include <vector>
+using namespace std;
+using namespace ftxui;
 
 class Game {
 private:

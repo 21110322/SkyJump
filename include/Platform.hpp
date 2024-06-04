@@ -1,8 +1,14 @@
 // Esta clase podría representar las plataformas en las que el jugador salta. 
 // Podría tener atributos como la posición y el tipo de plataforma (por ejemplo, normal, móvil, desapareciendo, etc.).
 
-#ifndef PLATFORM_HPP
-#define PLATFORM_HPP
+#pragma once
+#include <fstream>
+#include <Player.hpp>
+#include <Platform.hpp>
+#include <vector>
+using namespace std;
+using namespace ftxui;
+
 
 class Platform {
 private:
