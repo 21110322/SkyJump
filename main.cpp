@@ -47,7 +47,7 @@ int main() {
         // Por ejemplo, podrías tener algo como esto:
         player.setPositionY(player.getPositionY() + player.getVelocity());
 
-        // Renderizado y otras actualizaciones...
+
     }
 
     return 0;
