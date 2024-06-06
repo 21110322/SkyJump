@@ -8,7 +8,6 @@ int main()
     sf::Music music;
     if (!music.openFromFile("./assets/music/sonido.ogg"))
     {
-        // Error al cargar el archivo de música
         return -1;
     }
 
