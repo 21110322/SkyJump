@@ -18,7 +18,7 @@ int main()
         // Bloque de brinco
       
         sf::RectangleShape rectangle(sf::Vector2f(200, 100));
-        rectangle.setFillColor(sf::Color(185,122,87));
+        rectangle.setFillColor(sf::Color(189,188,240));
         rectangle.setPosition(300, 200);
         window.draw(rectangle);
 

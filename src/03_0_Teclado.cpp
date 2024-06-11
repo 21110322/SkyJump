@@ -7,7 +7,11 @@ public:
     {
         if (!texture.loadFromFile(imagePath))
         {
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> fbfde59 (11/6/24.3)
         }
         sprite.setTexture(texture);
         sprite.setPosition(position);
@@ -34,8 +38,13 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "DinoChrome");
 
+<<<<<<< HEAD
     
     Personaje character(sf::Vector2f(20, 300), "./assets/images/conejo.png");
+=======
+    // Asegúrate de proporcionar la ruta correcta a la imagen que deseas cargar
+    Personaje character(sf::Vector2f(400, 300), "./assets/images/conejo.png");
+>>>>>>> fbfde59 (11/6/24.3)
 
     while (window.isOpen())
     {
