@@ -35,7 +35,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 600), "DinoChrome");
 
     
-    Personaje character(sf::Vector2f(400, 300), "./assents/images/conejo.png");
+    Personaje character(sf::Vector2f(20, 300), "./assets/images/conejo.png");
 
     while (window.isOpen())
     {
