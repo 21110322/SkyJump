@@ -3,34 +3,39 @@
 class Personaje
 {
 public:
-    Personaje(sf::Vector2f position, sf::Color color)
+    Personaje(sf::Vector2f position, const std::string& imagePath)
     {
-        shape.setSize(sf::Vector2f(50, 50));
-        shape.setPosition(position);
-        shape.setFillColor(color);
+        if (!texture.loadFromFile(imagePath))
+        {
+
+        }
+        sprite.setTexture(texture);
+        sprite.setPosition(position);
     }
 
     void move(float offsetX, float offsetY)
     {
-        shape.move(offsetX, offsetY);
+        sprite.move(offsetX, offsetY);
     }
 
     void draw(sf::RenderWindow &window)
     {
-        window.draw(shape);
+        window.draw(sprite);
     }
 
 private:
-    sf::RectangleShape shape;
+    sf::Texture texture;
+    sf::Sprite sprite;
 };
 
-double velocidad = 100;
+double velocidad = 190;
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "DinoChrome");
 
-    Personaje character(sf::Vector2f(400, 300), sf::Color::Red);
+    
+    Personaje character(sf::Vector2f(400, 300), "./assents/images/conejo.png");
 
     while (window.isOpen())
     {
@@ -50,6 +55,7 @@ int main()
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
                 {
                     character.move(velocidad, 0);
+                }
             }
         }
 
