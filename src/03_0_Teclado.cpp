@@ -7,7 +7,7 @@ public:
     {
         shape.setSize(sf::Vector2f(50, 50));
         shape.setPosition(position);
-        shape.setFillColor(color);
+        shape.setFillColor(Color);
     }
 
     void move(float offsetX, float offsetY)
