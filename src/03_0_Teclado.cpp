@@ -7,7 +7,7 @@ public:
     {
         shape.setSize(sf::Vector2f(50, 50));
         shape.setPosition(position);
-        shape.setFillColor(Color);
+        shape.setFillColor(color);
     }
 
     void move(float offsetX, float offsetY)
@@ -50,15 +50,6 @@ int main()
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
                 {
                     character.move(velocidad, 0);
-                }
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-                {
-                    character.move(0, velocidad * -1);
-                }
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-                {
-                    character.move(0, velocidad);
-                }
             }
         }
 
