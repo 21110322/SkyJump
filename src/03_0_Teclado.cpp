@@ -1,20 +1,16 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
 
 class Personaje
 {
 public:
-    Personaje(sf::Vector2f position, const std::string& imagePath)
+    Personaje(sf::Vector2f position, const std::string &imagePath)
     {
-        if (!texture.loadFromFile(imagePath))
+        if (texture.loadFromFile(imagePath))
         {
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> fbfde59 (11/6/24.3)
+            sprite.setTexture(texture);
+            sprite.setPosition(position);
         }
-        sprite.setTexture(texture);
-        sprite.setPosition(position);
     }
 
     void move(float offsetX, float offsetY)
@@ -36,15 +32,11 @@ double velocidad = 190;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "DinoChrome");
+    sf::RenderWindow window(sf::VideoMode(736, 600), "DinoChrome");
 
-<<<<<<< HEAD
-    
-    Personaje character(sf::Vector2f(20, 300), "./assets/images/conejo.png");
-=======
-    // Asegúrate de proporcionar la ruta correcta a la imagen que deseas cargar
-    Personaje character(sf::Vector2f(400, 300), "./assets/images/conejo.png");
->>>>>>> fbfde59 (11/6/24.3)
+    Personaje conejo(sf::Vector2f(20, 300), "./assets/images/conejo.png");
+    Personaje fondo(sf::Vector2f(0, 0), "./assets/images/cielo.jpg");
+    Personaje bloque(sf::Vector2f(20, 30), "./assets/images/bloque.png");
 
     while (window.isOpen())
     {
@@ -59,17 +51,24 @@ int main()
             {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
                 {
-                    character.move(velocidad * -1, 0);
+                    conejo.move(velocidad * -1, 0);
                 }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
                 {
-                    character.move(velocidad, 0);
+                    conejo.move(velocidad, 0);
                 }
             }
         }
+//Inicio del movimiento del fondo
+
+
+    fondo.move(0, -0.1);
+
 
         window.clear();
-        character.draw(window);
+        fondo.draw(window);
+        conejo.draw(window);
+        bloque.draw(window);
         window.display();
     }
 
